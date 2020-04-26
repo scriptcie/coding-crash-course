@@ -1,0 +1,98 @@
+#+TITLE: Crash, Compile & Corona
+
+* Vrijmibo talk
+
+** 30 minute introduction to programming
+
+*** 10 minutes syntax overview
+
+Short intro into python
+
+- What about other languages
+- Short comparison
+
+*** 10 minute example
+
+Show how to solve a simple question
+
+*** 5 minute explanation of other examples
+
+Show where to find the jupyter notebooks and explain how to tackle the problems.
+Consider using examples that build upon the previous example.
+
+*** 5 minutes conclusion
+
+Talk about other essential skills
+
+- Git
+- Command line
+- Social skills
+- Consider using linux instead of windows
+- Text editors
+
+- Compilers
+
+** Jupyter notebooks
+
+Should contain the basic example, and 3 questions.
+Solutions to the basic example should include Python and Julia.
+Solutions will be made public after the vrijmibo event.
+*** Resources
+
+Hackerrank
+Exercism
+
+** Klaverjas examples
+
+*** Determining points
+**** Easy: determine the points earned from a trick without honor with SANS bid :example:
+**** Easy: determine the points earned from a trick without honor with non sans bid :exercise:
+**** Medium: determine the points earned from a trick with SANS bid and honor from three or four in a row :example:
+
+Easier: consider only cards of the same suit
+
+Functional vs hand written for loop
+For loop:
+- Easier to write without knowledge
+
+Functional
+- Easier to reason about
+- Easier to manipulate
+- Uses intuition (need to learn this)
+
+**** Medium: determine the points earned from a trick with honor :exercise:
+
+Include non sans (stuk)
+
+*** Determining winners
+**** Easy: find the winning card when playing SANS :example:
+
+Given the following list of hands, for each hand find the card with the highest
+rank and add their ranks.
+
+**** Medium: find the winning card when not playing SANS :exercise:example:
+
+**** Hard: determine the points earned from a hand, while considering laatste slag, pit and wet
+
+TODO: determine format of a "Hand"
+H, JH, QH, KH, 10H, 9H 8H 7H AH, ...
+
+*** Determine the odds of receiving a sorted hand
+
+*** Hard: verzaken
+**** Drunk and stupid
+
+Given that you are playing SANS, determine the odds that you will verzaak by
+playing a random card from your hand.
+
+**** Determine the hands where someone verzaakt
+
+H, JH, QH, KH, 10H, 9H 8H 7H AH, ...
+
+IO
+Given a list of tricks played, determine if a player has verzaakt.
+Determine if a player has verzaakt
+
+*** Hard
+
+Random
