@@ -26,7 +26,8 @@ const ProgressBar = ({ slideNumber, numberOfSlides }) => {
 
   return (
     <strong>
-      {displaySlideNumber(slideNumber + initialIndex)} / {numberOfSlides}
+      {displaySlideNumber(slideNumber + initialIndex)} /{' '}
+      {numberOfSlides - (1 - initialIndex)}
     </strong>
   );
 };
