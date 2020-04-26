@@ -39,7 +39,7 @@ Julia is a general purpose language focused on scientific domains
 
 ---
 
-# Setting up Julia
+# Setting up Julia on your system
 
 - Download the julia binary at their [downloads page](https://julialang.org/downloads/)
 - Check the [platform specific instructions](https://julialang.org/downloads/platform/)
@@ -59,6 +59,12 @@ Use **Juno** or **VScode** as your text editor
 
 Use either Julia's REPL (Read Eval Print Loop) or a Jupyter notebook
 
+## Including files
+
+```julia
+include("filename.jl")
+```
+
 ---
 
 # Syntax
@@ -71,6 +77,14 @@ https://cheatsheets.quantecon.org/
 
 ---
 
+# Math functions
+
+---
+
+# Control flow
+
+---
+
 # String manipulation
 
 ---
@@ -79,11 +93,23 @@ https://cheatsheets.quantecon.org/
 
 ---
 
+# Functions
+
+---
+
 # Random numbers
 
 ---
 
 # File input and output
+
+---
+
+# (Advanced) Testing
+
+---
+
+# (Advanded) Packages
 
 ---
 
