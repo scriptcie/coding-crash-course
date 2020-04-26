@@ -1,3 +1,24 @@
+# Coding Crash Course
+
+This project contains the slides and code for the coding crash course.
+
+# Development
+
+We use the [spectacle](https://formidable.com/open-source/spectacle/) library to
+create our slides.
+Slides can be placed in the Deck component located in `src/Deck.jsx`.
+You can either use markdown to format your slides, or use Spectacle's React
+components (which scales the fontsizes automatically to fit the screen) as shown
+in the demo slides (`src/Slides/DemoSlides.jsx`).
+
+The goal of these slides is that we can easily switch between programming
+languages. To do this a `Code` component has been added which loads the code
+examples in the `const codeExamples` object.
+Once an example has been added it can be shown using `<Code code="code-key" />`
+where `code-key` is the key used in the `codeExamples` object.
+
+# Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
