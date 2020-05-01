@@ -55,6 +55,7 @@ const itemsToPickFrom = [
   "Code doesn't work",
   'Typo in slides',
   'Typo in code',
+  'Slides are updated during the talk',
 ];
 
 const Bingo = () => {
