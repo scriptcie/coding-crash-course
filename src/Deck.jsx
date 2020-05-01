@@ -282,11 +282,16 @@ y = {0, 1, 2, 0, 0, 1, 2, 2} # => {0, 1, 2}
 
 \`\`\`python
 player_hands = {
-    "player_1": ["9J"],
-    "player_2": ["9J"],
-    "player_3": ["9J"],
-    "player_4": ["9J"],
+    "player_1": ["9H"],
+    "player_2": ["JH"],
+    "player_3": ["KH"],
+    "player_4": ["7H"],
 }
+
+player_hands["player_1"] # => ["9H]
+
+# Assign a value to a key from the dictionary
+player_hands["player_1"] = ["9H", "8H"]
 \`\`\`
 
 ---
