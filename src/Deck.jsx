@@ -102,6 +102,12 @@ You can play with these examples yourself by going to the jupyter notebook found
 - [Reference code](https://hub.gke.mybinder.org/user/scriptcie-coding-crash-course-lp5xo3rb/notebooks/notebooks/Refrences.ipynb)
 - [Exercises](https://mybinder.org/v2/gh/scriptcie/coding-crash-course/master?filepath=notebooks%2FExercises.ipynb)
 
+
+Or if that doesn't work download the notebooks and run them locally
+
+- [Reference code](https://github.com/scriptcie/coding-crash-course/blob/master/notebooks/Refrences.ipynb)
+- [Exercises](https://github.com/scriptcie/coding-crash-course/blob/master/notebooks/Exercises.ipynb)
+
 ---
 
 ## Variables and data types in Python
