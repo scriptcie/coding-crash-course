@@ -51,6 +51,10 @@ const itemsToPickFrom = [
   'Loud typing noises',
   'Can you repeat that?',
   '"I need to get a new beer"',
+  "Tex doesn't work",
+  "Code doesn't work",
+  'Typo in slides',
+  'Typo in code',
 ];
 
 const Bingo = () => {
