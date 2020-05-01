@@ -358,9 +358,22 @@ def sum_0_to_n(n):
 
 # Programming essentials
 
+- Get familiar with using a text editor
 - Learn to use GIT
 - Get familiar with a command line interface
 - Consider switching to Linux
+
+---
+
+# Seting up Python
+
+- Install a text editor
+  - VSCode
+  - Sublime Text
+  - Emacs
+  - VIM
+- Install python
+- Install jupyter
 
 ---
 
@@ -733,22 +746,24 @@ Write a function to determine the winning card, then use \`trick.index(card)\` t
 
 ### Determine the points earned by a team
 
-Given the following example hand:
+Given the following hand played by Pieter and versus Mees and Joris:
 \`\`\`txt
-90H
-9H 10H 7H 7C
-JH QH KH 8C
-AH 9C 8H 7S
-9H 10H 7H 8S
-9H 10H 7H 7D
+132H
+AC 7C 8C QC
+KH 7H JH AH
+10H QH 9H 9D
+7D 8H AD JD
+AS QS 7S 10S
+10C KC 9S JC
+9C JS 8D QD
+8S KS KD 10D
 \`\`\`
 
-where each row represents a trick and the ith column is the card of the ith player, compute the points earned by the 0th and 2nd player.
+where each row represents a trick, the card on each row was played by Pieter, Mees, Jelle and Joris respectively , compute the points earned by Pieter and Jelle.
 
+Did Pieter and Jelle go wet?
 
-### Tip:
-
-Reuse the functions you wrote in the previous exercies
+Reuse the functions you wrote in the previous exercises!
 
 ---
 
