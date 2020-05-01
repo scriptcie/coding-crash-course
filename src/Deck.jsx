@@ -184,8 +184,8 @@ ten_of_hearts = "9H"
 ten_of_spades = "10S"
 
 # Getting a character from a string (counting starts from 0)
-jack = jack_of_hears[0] #=> "J"
-hearts = jack_of_hears[1] # => "H"
+jack = jack_of_hearts[0] #=> "J"
+hearts = jack_of_hearts[1] # => "H"
 
 # Check if two "cards" are of the same suit
 same_suit = jack_of_hearts[1] == ten_of_hearts[1] # => True
@@ -287,7 +287,7 @@ player_hands = {
 ### Importing libraries
 
 \`\`\`python
-import pi from math
+from math import pi
 
 # Now pi is accessible
 x = pi**2
