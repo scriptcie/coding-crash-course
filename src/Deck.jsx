@@ -347,45 +347,95 @@ def sum_0_to_n(n):
 
 ---
 
-# Exercises
+## Exercises
 
 The best way to start learn programming is to start writing, or changing, code.
 
-## Klaverjas
+### Klaverjas
 
 We will consider a couple of exercise related to the game of Klaverjas.
 These exercises will be treated in the context of a Crash & Compile competition.
 
-For now it is only importend to know how counting points works.
+For now it is only imporant to know how counting points works.
 
-## Think before writing code!
+---
+
+## Exercises
+
+The best way to start learn programming is to start writing, or changing, code.
+
+### Klaverjas
+
+We will consider a couple of exercise related to the game of Klaverjas.
+These exercises will be treated in the context of a Crash & Compile competition.
+
+For now it is only imporant to know how counting points works.
+
+### Think before writing code!
 
 Try to separate the problem into multiple smaller problems
 
 ---
 
-# Example 1
+## Example 1
 
-## Computing the points earned by a trick
+### Computing the points earned by a trick
 
-Consider the trick (Dutch: "slag", also known as "Hitje") represented by,
+Consider the trick (Dutch: "slag") represented by,
 \`\`\`txt
 AH 7H 10H 9H
 \`\`\`
 
 The total points earned from winning this trick when playing SANS is \`11 + 0 +
 10 + 0 = 21\`.
-
-## Exercise
-Write a function that computes the points from any trick when playing SANS.
-
-Goal: compute the total number of points of winning all tricks listed in [this
-file](./sans_tricks.txt), where each line represents 1 trick.
 
 ---
 
-# Example 1
-## Computing the points earned by a trick
+## Example 1
+
+### Computing the points earned by a trick
+
+Consider the trick (Dutch: "slag") represented by,
+\`\`\`txt
+AH 7H 10H 9H
+\`\`\`
+
+The total points earned from winning this trick when playing SANS is \`11 + 0 +
+10 + 0 = 21\`.
+
+### Points of a card
+
+- A: 11
+- 10: 10
+- K: 4
+- Q: 3
+- J: 2
+- 9: 0
+- 8: 0
+- 7: 0
+
+---
+
+## Example 1
+
+### Computing the points earned by a trick
+
+Consider the trick (Dutch: "slag") represented by,
+\`\`\`txt
+AH 7H 10H 9H
+\`\`\`
+
+The total points earned from winning this trick when playing SANS is \`11 + 0 +
+10 + 0 = 21\`.
+
+### Exercise
+
+Write a function that computes the points from any trick when playing SANS.
+
+---
+
+## Example 1
+### Computing the points earned by a trick
 
 Consider the trick (Dutch: "slag", also known as "Hitje") represented by,
 \`\`\`txt
@@ -395,7 +445,17 @@ AH 7H 10H 9H
 The total points earned from winning this trick when playing SANS is \`11 + 0 +
 10 + 0 = 21\`.
 
-## Step 1
+### Step 1
+Consider the example trick "AH 7H 10H 9H".
+
+1. Split the trick into separate cards
+2. Determine rank and suit of a card
+3. Determine the points of a card
+4. Sum points of each card
+
+---
+
+### Step 1
 Consider the example trick "AH 7H 10H 9H".
 
 1. Split the trick into separate cards
@@ -406,39 +466,170 @@ Consider the example trick "AH 7H 10H 9H".
 We will want to compute the points from this trick by determining the points of
 each card separately.
 
-\`\`\`julia
-julia> trick =  "AH 7H 10H 9H"
-"AH 7H 10H 9H"
+\`\`\`python
+trick =  "AH 7H 10H 9H"
+cards = trick.split(" ") # => ["AH", "7H", "10H", "9H"]
+\`\`\`
 
-julia> cards = split(trick, " ")
-4-element Array{SubString{String},1}:
- "AH"
- "7H"
- "10H"
- "9H"
- \`\`\`
+---
 
- Next get the rank and suit of each card,
- \`\`\`julia
-julia> card = "10H";
+### Step 1
+Consider the example trick "AH 7H 10H 9H".
 
-julia> rank = card[1:end-1]
-"10"
+1. Split the trick into separate cards
+2. Determine rank and suit of a card
+3. Determine the points of a card
+4. Sum points of each card
 
-julia> suit = card[end]
-'H': ASCII/Unicode U+0048 (category Lu: Letter, uppercase)
- \`\`\`
+We will want to compute the points from this trick by determining the points of
+each card separately.
 
+\`\`\`python
+trick =  "AH 7H 10H 9H"
+cards = trick.split(" ") # => ["AH", "7H", "10H", "9H"]
+\`\`\`
+
+Next get the rank and suit of each card,
+ \`\`\`python
+card = "10H";
+rank = card[0:-1] # => "10"
+suit = card[-1] # => "H"
+\`\`\`
+
+---
+
+### Step 1
+Consider the example trick "AH 7H 10H 9H".
+
+1. Split the trick into separate cards
+2. Determine rank and suit of a card
+3. Determine the points of a card
+4. Sum points of each card
+
+We will want to compute the points from this trick by determining the points of
+each card separately.
+
+\`\`\`python
+trick =  "AH 7H 10H 9H"
+cards = trick.split(" ") # => ["AH", "7H", "10H", "9H"]
+\`\`\`
+
+Next get the rank and suit of each card,
+ \`\`\`python
+card = "10H";
+rank = card[0:-1] # => "10"
+suit = card[-1]
+\`\`\`
+
+Use a dictionairy to get the poitns
+ \`\`\`python
+rankToPoints = {"A": 11, "10": 10, "K": 4, "Q": 3, "J": 2, "9": 0, "8": 0, "7": 0}
+points = rankToPoints[rank]
+\`\`\`
+
+---
+
+### Step 1
+
+\`\`\`python
+trick =  "AH 7H 10H 9H"
+cards = trick.split(" ") # => ["AH", "7H", "10H", "9H"]
+\`\`\`
+
+Next get the rank and suit of each card,
+ \`\`\`python
+card = "10H";
+rank = card[0:-1] # => "10"
+suit = card[-1]
+\`\`\`
+
+Use a dictionairy to get the poitns
+ \`\`\`python
+rankToPoints = {"A": 11, "10": 10, "K": 4, "Q": 3, "J": 2, "9": 0, "8": 0, "7": 0}
+points = rankToPoints[rank]
+\`\`\`
+
+---
+
+### Step 1
+
+\`\`\`python
+trick =  "AH 7H 10H 9H"
+cards = trick.split(" ") # => ["AH", "7H", "10H", "9H"]
+\`\`\`
+
+Next get the rank and suit of each card,
+ \`\`\`python
+card = "10H";
+rank = card[0:-1] # => "10"
+suit = card[-1]
+\`\`\`
+
+Use a dictionairy to get the poitns
+ \`\`\`python
+rankToPoints = {"A": 11, "10": 10, "K": 4, "Q": 3, "J": 2, "9": 0, "8": 0, "7": 0}
+points = rankToPoints[rank]
+\`\`\`
+
+#### Define a function
+
+\`\`\`python
+def pointsOfCard(card, isTrump = False):
+    rank = card[0:-1] # => "10"
+    suit = card[-1]
+    rankToPoints = {"A": 11, "10": 10, "K": 4, "Q": 3, "J": 2, "9": 0, "8": 0, "7": 0}
+    points = rankToPoints[rank]
+    return points
+\`\`\`
+
+---
+
+### Step 1
+
+\`\`\`python
+def pointsOfCard(card, isTrump = False):
+    rank = card[0:-1] # => "10"
+    suit = card[-1]
+    rankToPoints = {"A": 11, "10": 10, "K": 4, "Q": 3, "J": 2, "9": 0, "8": 0, "7": 0}
+    points = rankToPoints[rank]
+    return points
+
+
+trick =  "AH 7H 10H 9H" # => "AH 7H 10H 9H"
+cards = trick.split(" ") # => ["AH", "7H", "10H", "9H"]
+
+total = 0
+for card in cards
+    total += pointsOfCard(card)
+\`\`\`
+
+---
+
+### Step 1 (using list comprehensions)
+
+\`\`\`python
+def pointsOfCard(card, isTrump = False):
+    rank = card[0:-1] # => "10"
+    suit = card[-1]
+    rankToPoints = {"A": 11, "10": 10, "K": 4, "Q": 3, "J": 2, "9": 0, "8": 0, "7": 0}
+    points = rankToPoints[rank]
+    return points
+
+
+trick =  "AH 7H 10H 9H" # => "AH 7H 10H 9H"
+cards = trick.split(" ") # => ["AH", "7H", "10H", "9H"]
+
+total = sum([pointsOfCard(card) for card in cards])
+\`\`\`
 
 ---
 
 # Learning resources
 
-- https://julialang.org/learning/
-- https://stanford.edu/class/ee103/
-- https://julia.quantecon.org/
-- https://cheatsheets.quantecon.org/
-
+- Hackerrank
+- Exercism
+- Codeacademy
+- Pluralsight
 
 ---
 
@@ -446,7 +637,7 @@ julia> suit = card[end]
 
 - Learn to use GIT
 - Get familiar with a command line interface
-- BABO (Blanks Around Binary Operators, \`a+1\` vs \`a + 1\`
+- Consider switching to Linux
 `}
       </Markdown>
     </Deck>
