@@ -31,13 +31,7 @@ const SelectLanguage = () => {
     </LanguageChoice>
   );
 
-  return (
-    <div style={{ pointerEvents: 'all' }}>
-      <LanguageButton lang={LANGUAGES.JULIA}>Julia</LanguageButton>
-      <LanguageButton lang={LANGUAGES.PYTHON}>Python</LanguageButton>
-      <LanguageButton lang={LANGUAGES.JAVASCRIPT}>JavaScript</LanguageButton>
-    </div>
-  );
+  return <div style={{ pointerEvents: 'all' }}></div>;
 };
 
 const FlexColumn = styled.div`
