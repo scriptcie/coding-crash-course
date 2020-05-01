@@ -35,6 +35,8 @@ const AppDeck = () => {
         {`
 # Coding Crash Coarse
 
+### An intro to Python and coding exercises
+
 ## By the \`S[ck]rip(t|t?c)ie\`
 
 ---
