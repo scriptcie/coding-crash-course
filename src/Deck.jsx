@@ -99,7 +99,8 @@ In the following slides we will introduce the basic concepts of Python.
 
 You can play with these examples yourself by going to the jupyter notebook found here,
 
-https://....
+- [Reference code](https://hub.gke.mybinder.org/user/scriptcie-coding-crash-course-lp5xo3rb/notebooks/notebooks/Refrences.ipynb)
+- [Exercises](https://mybinder.org/v2/gh/scriptcie/coding-crash-course/master?filepath=notebooks%2FExercises.ipynb)
 
 ---
 
@@ -265,7 +266,7 @@ Sets are like lists, but without duplicates and order,
 # x is a list
 x = [0, 1, 2, 0, 0, 1, 2, 2]
 
-# y is a list
+# y is a set
 y = {0, 1, 2, 0, 0, 1, 2, 2} # => {0, 1, 2}
 \`\`\`
 
