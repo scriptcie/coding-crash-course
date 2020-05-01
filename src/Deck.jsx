@@ -382,7 +382,7 @@ def sum_0_to_n(n):
 - Install python
 - Install jupyter notebooks
 
-Repalce python with Julia
+Replace python with Julia
 
 ---
 
