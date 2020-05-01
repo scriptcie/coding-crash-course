@@ -347,16 +347,20 @@ def sum_0_to_n(n):
 
 ---
 
-## Exercises
+# Learning resources
 
-The best way to start learn programming is to start writing, or changing, code.
+- Hackerrank
+- Exercism
+- Codeacademy
+- Pluralsight
 
-### Klaverjas
+---
 
-We will consider a couple of exercise related to the game of Klaverjas.
-These exercises will be treated in the context of a Crash & Compile competition.
+# Programming essentials
 
-For now it is only imporant to know how counting points works.
+- Learn to use GIT
+- Get familiar with a command line interface
+- Consider switching to Linux
 
 ---
 
@@ -371,62 +375,54 @@ These exercises will be treated in the context of a Crash & Compile competition.
 
 For now it is only imporant to know how counting points works.
 
-### Think before writing code!
-
-Try to separate the problem into multiple smaller problems
-
 ---
 
-## Example 1
+## Exercises
 
-### Computing the points earned by a trick
+The best way to start learn programming is to start writing, or changing, code.
 
-Consider the trick (Dutch: "slag") represented by,
-\`\`\`txt
-AH 7H 10H 9H
-\`\`\`
+### Klaverjas
 
-The total points earned from winning this trick when playing SANS is \`11 + 0 +
-10 + 0 = 21\`.
+We will consider a couple of exercise related to the game of Klaverjas.
+These exercises will be treated in the context of a Crash & Compile competition.
 
----
-
-## Example 1
-
-### Computing the points earned by a trick
-
-Consider the trick (Dutch: "slag") represented by,
-\`\`\`txt
-AH 7H 10H 9H
-\`\`\`
-
-The total points earned from winning this trick when playing SANS is \`11 + 0 +
-10 + 0 = 21\`.
+For now it is only imporant to know how counting points works.
 
 ### Points of a card
 
-- A: 11
-- 10: 10
-- K: 4
-- Q: 3
-- J: 2
-- 9: 0
-- 8: 0
-- 7: 0
+- **Non trump**:
+
+  A: 11 , 10: 10 , K: 4 , Q: 3 , J: 2 , 9: 0 , 8: 0 , 7: 0
+
+- **Trump**:
+
+  J: 20, 9: 14, A: 11 , 10: 10 , K: 4 , Q: 3 , 8: 0 , 7: 0
 
 ---
 
-## Example 1
+## Exercise 1
 
-### Computing the points earned by a trick
+### Counting the points earned by a trick
 
 Consider the trick (Dutch: "slag") represented by,
 \`\`\`txt
 AH 7H 10H 9H
 \`\`\`
 
-The total points earned from winning this trick when playing SANS is \`11 + 0 +
-10 + 0 = 21\`.
+The total points earned from winning this trick when playing SANS (meaning there are no trump cards) is \`11 + 0 + 10 + 0 = 21\`.
+
+---
+
+## Exercise 1
+
+### Counting the points earned by a trick
+
+Consider the trick (Dutch: "slag") represented by,
+\`\`\`txt
+AH 7H 10H 9H
+\`\`\`
+
+The total points earned from winning this trick when playing SANS (meaning there are no trump cards) is \`11 + 0 + 10 + 0 = 21\`.
 
 ### Exercise
 
@@ -434,8 +430,9 @@ Write a function that computes the points from any trick when playing SANS.
 
 ---
 
-## Example 1
-### Computing the points earned by a trick
+## Exercise 1
+
+### Counting the points earned by a trick
 
 Consider the trick (Dutch: "slag", also known as "Hitje") represented by,
 \`\`\`txt
@@ -445,7 +442,7 @@ AH 7H 10H 9H
 The total points earned from winning this trick when playing SANS is \`11 + 0 +
 10 + 0 = 21\`.
 
-### Step 1
+### Points of a trick
 Consider the example trick "AH 7H 10H 9H".
 
 1. Split the trick into separate cards
@@ -455,7 +452,7 @@ Consider the example trick "AH 7H 10H 9H".
 
 ---
 
-### Step 1
+### Points of a trick
 Consider the example trick "AH 7H 10H 9H".
 
 1. Split the trick into separate cards
@@ -473,7 +470,7 @@ cards = trick.split(" ") # => ["AH", "7H", "10H", "9H"]
 
 ---
 
-### Step 1
+### Points of a trick
 Consider the example trick "AH 7H 10H 9H".
 
 1. Split the trick into separate cards
@@ -498,7 +495,7 @@ suit = card[-1] # => "H"
 
 ---
 
-### Step 1
+### Points of a trick
 Consider the example trick "AH 7H 10H 9H".
 
 1. Split the trick into separate cards
@@ -529,7 +526,7 @@ points = rankToPoints[rank]
 
 ---
 
-### Step 1
+### Points of a trick
 
 \`\`\`python
 trick =  "AH 7H 10H 9H"
@@ -551,7 +548,7 @@ points = rankToPoints[rank]
 
 ---
 
-### Step 1
+### Points of a trick
 
 \`\`\`python
 trick =  "AH 7H 10H 9H"
@@ -584,7 +581,7 @@ def pointsOfCard(card, isTrump = False):
 
 ---
 
-### Step 1
+### Points of a trick
 
 \`\`\`python
 def pointsOfCard(card, isTrump = False):
@@ -593,7 +590,6 @@ def pointsOfCard(card, isTrump = False):
     rankToPoints = {"A": 11, "10": 10, "K": 4, "Q": 3, "J": 2, "9": 0, "8": 0, "7": 0}
     points = rankToPoints[rank]
     return points
-
 
 trick =  "AH 7H 10H 9H" # => "AH 7H 10H 9H"
 cards = trick.split(" ") # => ["AH", "7H", "10H", "9H"]
@@ -605,39 +601,172 @@ for card in cards
 
 ---
 
-### Step 1 (using list comprehensions)
+### Points of a trick (define \`pointsOfTrick\` function)
 
 \`\`\`python
 def pointsOfCard(card, isTrump = False):
-    rank = card[0:-1] # => "10"
+    rank = card[0:-1]
     suit = card[-1]
     rankToPoints = {"A": 11, "10": 10, "K": 4, "Q": 3, "J": 2, "9": 0, "8": 0, "7": 0}
     points = rankToPoints[rank]
     return points
 
+def pointsOfTrick(trick, trump = None):
+    cards = trick.split(" ")
+    total = 0
+    for card in cards:
+        total += pointsOfCard(card)
+    return total
 
 trick =  "AH 7H 10H 9H" # => "AH 7H 10H 9H"
-cards = trick.split(" ") # => ["AH", "7H", "10H", "9H"]
-
-total = sum([pointsOfCard(card) for card in cards])
+pointsOfTrick(trick) # => 21
 \`\`\`
 
 ---
 
-# Learning resources
+### Points of a trick (using list comprehensions)
 
-- Hackerrank
-- Exercism
-- Codeacademy
-- Pluralsight
+\`\`\`python
+def pointsOfCard(card, isTrump = False):
+    rank = card[0:-1]
+    suit = card[-1]
+    rankToPoints = {"A": 11, "10": 10, "K": 4, "Q": 3, "J": 2, "9": 0, "8": 0, "7": 0}
+    points = rankToPoints[rank]
+    return points
+
+def pointsOfTrick(trick, trump = None):
+    cards = trick.split(" ")
+    return sum([pointsOfCard(card) for card in cards])
+
+trick =  "AH 7H 10H 9H" # => "AH 7H 10H 9H"
+pointsOfTrick(trick) # => 21
+\`\`\`
 
 ---
 
-# Programming essentials
+## Exercise 2
 
-- Learn to use GIT
-- Get familiar with a command line interface
-- Consider switching to Linux
+### Counting points earned by a trick with trump
+
+Repeat the previous example but include trump.
+
+### Points of a card
+
+A card is trump when its suit is the same as trump (either Hearts ("H"), Spades ("S"), Clubs ("C"), Dimaonds ("D"))
+
+- **Non trump**:
+
+  A: 11 , 10: 10 , K: 4 , Q: 3 , J: 2 , 9: 0 , 8: 0 , 7: 0
+
+- **Trump**:
+
+  J: 20, 9: 14, A: 11 , 10: 10 , K: 4 , Q: 3 , 8: 0 , 7: 0
+
+
+---
+
+### Counting points earned by a trick with trump
+
+- **Non trump**:
+
+  A: 11 , 10: 10 , K: 4 , Q: 3 , J: 2 , 9: 0 , 8: 0 , 7: 0
+
+- **Trump**:
+
+  J: 20, 9: 14, A: 11 , 10: 10 , K: 4 , Q: 3 , 8: 0 , 7: 0
+
+\`\`\`python
+def pointsOfCard(card, isTrump = False):
+    rank = card[0:-1]
+    suit = card[-1]
+    rankToPoints = {"A": 11, "10": 10, "K": 4, "Q": 3, "J": 2, "9": 0, "8": 0, "7": 0}
+    points = rankToPoints[rank]
+    return points
+
+def pointsOfTrick(trick, trump = None):
+    cards = trick.split(" ")
+    return sum([pointsOfCard(card) for card in cards])
+
+trick =  "AH 7H 10H 9H" # => "AH 7H 10H 9H"
+trump = "H"
+pointsOfTrick(trick) # => 35
+\`\`\`
+
+---
+
+## Exercise 3
+
+### Counting points earned by a trick with honor
+
+Extend the previous example, but now include the option to earn honor.
+
+- **Three in a row**: 20 points
+- **Four in a row**: 50 points
+- **Four of the same face**: 100 points
+- **Stuk** (trick contains the King and Queen of trump): 20 points
+
+\`\`\`python
+trick =  "AH KH QH JH"
+trump = "H"
+pointsOfTrick(trick) # => 11 + 4 + 3 + 20 + 70
+\`\`\`
+
+---
+
+## Exercise 4
+
+### Determine the winner of a trick
+
+Write a function that determines the winner of a trick.
+As an example take \`["7H", "10H", "9C", "JC"]\` with Clubs ("C") being trump.
+
+Your function should return 3 (the index of "JC")
+
+
+### Tip:
+
+Write a function to determine the winning card, then use \`trick.index(card)\` to get the winner.
+
+---
+
+## Exercise 5
+
+### Determine the points earned by a team
+
+Given the following example hand:
+\`\`\`txt
+90H
+9H 10H 7H 7C
+JH QH KH 8C
+AH 9C 8H 7S
+9H 10H 7H 8S
+9H 10H 7H 7D
+\`\`\`
+
+where each row represents a trick and the ith column is the card of the ith player, compute the points earned by the 0th and 2nd player.
+
+
+### Tip:
+
+Reuse the functions you wrote in the previous exercies
+
+---
+
+## Exercise 6
+
+Determine the odds of receiving a sorted hand when a pack of klaverjas cards has been dealt.
+
+---
+
+## Exercise 7
+
+When playing SANS, determine the odds that someone will "verzaak" when playing random cards
+
+---
+
+## Exercise 8
+
+Determine if a player has "Verzaakt"
 `}
       </Markdown>
     </Deck>
