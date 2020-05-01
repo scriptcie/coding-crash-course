@@ -373,7 +373,9 @@ def sum_0_to_n(n):
   - Emacs
   - VIM
 - Install python
-- Install jupyter
+- Install jupyter notebooks
+
+Repalce python with Julia
 
 ---
 
