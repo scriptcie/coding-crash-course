@@ -12,7 +12,7 @@
     "raw.macro": "^0.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "serve": "^11.3.0",
     "spectacle": "^6.0.2",
     "use-local-storage-state": "^2.0.0"
